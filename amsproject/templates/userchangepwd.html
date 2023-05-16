@@ -1,0 +1,108 @@
+{% block 'body' %}
+{% include 'navbar.html' %}
+<br>
+<br>
+<br>
+<br>
+<style>
+    input[type=password][name=opwd]  {
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=password][name=opwd]:focus {
+  outline: none;
+  border-color: #6ea4c8;
+  box-shadow: 0 0 5px #6ea4c8;
+}
+ input[type=password][name=npwd]  {
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=password][name=npwd]:focus {
+  outline: none;
+  border-color: #6ea4c8;
+  box-shadow: 0 0 5px #6ea4c8;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:focus {
+  outline: none;
+}
+</style>
+
+
+{% if error == "no" %}
+<mark><h3 align="center" style ="color:green">{{msg}}</h3></mark>
+{% endif %}
+
+{% if error == "yes" %}
+<mark><h3 align="center" style ="color:red">{{msg}}</h3></mark>
+{% endif %}
+
+<h3 align="Center"><u>Change Password</u></h3>
+
+<br>
+<form method="post" action="{% url 'empupdatepwd' %}">
+{% csrf_token %}
+
+<table align=center>
+
+<tr>
+<td><label style="font-weight:bold;">Old Password</label></td>
+
+<td><input type="password" name="opwd" placeholder="Enter Your Old Password" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label style="font-weight:bold;">New Password</label></td>
+<td><input type="password" name="npwd" placeholder="Enter Your New Password" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Change Password" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+
+{% endblock %}
+
+
+

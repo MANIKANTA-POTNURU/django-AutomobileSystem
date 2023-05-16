@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="stylesheet"href="{% static 'css/contact.css' %}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--========== HTML META TAGS ===========-->
+    <title>AMS ContactForm</title>
+    <meta
+      name="description"
+      content="AUTOMOBILES"
+    />
+    <meta name="author" content="AMS" />
+
+    <!--========== Open Graph / Facebook ===========-->
+    <meta
+      property="og:url"
+      content="https://repsonsive-website-playstation.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Responsive Website PlayStation" />
+    <meta
+      property="og:description"
+      content="Responsive Website PlayStation by Kennedy B."
+    />
+    <meta property="og:image" content="https://i.ibb.co/qCvjdFd/cover.png" />
+
+    <!--========== CANONICAL  ===========-->
+    <meta
+      property="canonical"
+      content="https://repsonsive-website-playstation.netlify.app/"
+    />
+    <meta property="keywords" content="responsive, website, playstation" />
+    <meta property="robots" content="responsive, website, playstation" />
+
+    <!--=========== TWITTER ===============-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:domain"
+      content="repsonsive-website-playstation.netlify.app"
+    />
+    <meta
+      property="twitter:url"
+      content="https://repsonsive-website-playstation.netlify.app/"
+    />
+    <meta name="twitter:title" content="Responsive Website PlayStation" />
+    <meta
+      name="twitter:description"
+      content="Responsive Website PlayStation by Kennedy B."
+    />
+    <meta name="twitter:image" content="https://i.ibb.co/qCvjdFd/cover.png" />
+    <!--========== FAVICON ===========-->
+    <link rel="icon" href="../../assets/svg/logo.svg" type="image/svg+xml" />
+    <!--========== GOOGLE FONTS ===========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--========== BOX ICONS ===========-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--========== CSS ===========-->
+    <link rel="preload" href="{% static 'css/contact1.css' %}" as="style" />
+    <link rel="stylesheet" href="{% static 'css/contact1.css' %}"/>
+  </head>
+  <body>
+
+
+ {% block 'body' %}
+{% include 'navbar.html' %}
+
+        <div class="nav_btns">
+          <i class="bx bx-moon change-theme" id="theme-button"></i>
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--========== MAIN ===========-->
+    <main class="main container">
+      <!--========== CONTACT INFO ===========-->
+      <section class="contact_data">
+        <a href="{% url 'home' %}" class="menu-item-link">
+
+                <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-long" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                  />
+                </svg>
+          back to home
+              </a>
+
+        <p class="contact_subtitle">ANSWERS WITHIN 24H</p>
+        <h1 class="contact_title">
+          Contact
+          <span class="contact_title-secondary">Us</span>
+        </h1>
+      </section>
+
+      <!--========== CONTACT FORM ===========-->
+      <div class="contact">
+        <section class="contact_dice">
+          <h2>Get in touch</h2>
+          <p class="contact_dice-subtitle">
+            We' love to hear from you. Our friendly team is always here to chat.
+          </p>
+
+          <div class="contact_adress">
+            <i class="bx bx-mail-send"></i>
+            <div>
+              <p class="title_adress">Chat to us</p>
+              <p class="content_adress">Our friendly team is here to help.</p>
+              <p class="content_adress-2">AMS@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact_office">
+            <i class="bx bxs-map"></i>
+            <div>
+              <p class="title_office">Office</p>
+              <p class="content_office">Come say hello at our office HQ.</p>
+              <p class="content_office-2">
+                VIJAYAWADA <br />
+                Near KL UNIVERSITY
+              </p>
+            </div>
+          </div>
+
+          <div class="contact_chat">
+            <i class="bx bxs-phone-call"></i>
+            <div>
+              <p class="title_chat">Chat to us</p>
+              <p class="content_chat">Mon-Fri from 8am to 5pm.</p>
+              <p class="content_office-2">+91 7337044983</p>
+            </div>
+          </div>
+
+          <div class="contact_networks">
+
+            <a href="https://github.com/MANIKANTA-POTNURU" target="_blank">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.instagram.com/mani_potnuru12/" target="_blank">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/manikanta-potnuru-723238226/"
+              target="_blank"
+            >
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact_form">
+          <h2>Level up your brand</h2>
+          <p class="contact_form-subtitle">
+            You can reach us anytime via <span> AMS@gmail.com</span>
+          </p>
+
+          <form
+            class="form"
+           method="post" action="{% url 'Contactfunction' %}">
+            {% csrf_token %}
+            <input
+              type="hidden"
+              name="_next"
+              value="https://repsonsive-website-playstation.netlify.app/assets/html/email.html"
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="your confirm have been sent to your email"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="form_name">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div class="form_email">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
+
+            <div class="form_mensage">
+              <label for="mensage">Message</label>
+              <textarea
+                name="Mensage"
+                id="mensage"
+                rows="5"
+                placeholder="What do you need?"
+                required
+              ></textarea>
+            </div>
+            <button class="button_form" type="submit">Send Message</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+
+    <!--========== SCROLL UP ===========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a>
+    <!--========== SCROLLREVEAL ===========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--========== JAVASCRIPT ===========-->
+    <script src="{% static 'js/contact.js' %}"></script>
+  {% endblock %}
+
+  </body>
+</html>
